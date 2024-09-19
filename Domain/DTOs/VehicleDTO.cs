@@ -1,4 +1,4 @@
-namespace MinimalApi.DTOs;
+namespace MinimalApi.Domain.DTOs;
 
 public class VehicleDTO
 {

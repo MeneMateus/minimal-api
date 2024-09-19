@@ -1,7 +1,5 @@
-using System.Data.Common;
 using MinimalApi.Domain.Entities;
 using MinimalApi.Domain.Interfaces;
-using MinimalApi.DTOs;
 using MinimalApi.Infra.Db;
 
 namespace MinimalApi.Domain.Services;

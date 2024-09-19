@@ -1,4 +1,4 @@
-using MinimalApi.DTOs;
+using MinimalApi.Domain.DTOs;
 
 namespace MinimalApi.Domain.Validator;
 

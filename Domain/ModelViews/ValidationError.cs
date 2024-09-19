@@ -2,6 +2,6 @@ namespace MinimalApi.Domain.ModelViews;
 
 public class ValidationError
 {
-    public List<string> Messages { get; set; }
+    public List<string> Messages { get; set; } = default!;
     
 }
