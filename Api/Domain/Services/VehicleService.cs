@@ -4,7 +4,7 @@ using MinimalApi.Infra.Db;
 
 namespace MinimalApi.Domain.Services;
 
-class VehicleService : iVehicleService
+public class VehicleService : iVehicleService
 {
     private readonly DbContexto _contexto;
     public VehicleService(DbContexto db)

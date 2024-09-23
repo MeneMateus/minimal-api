@@ -2,8 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MinimalApi.Domain.Entities;
 
 namespace MinimalApi.Infra.Db;
-
-class DbContexto : Microsoft.EntityFrameworkCore.DbContext
+public class DbContexto : Microsoft.EntityFrameworkCore.DbContext
 {
     private readonly IConfiguration _configAppSettings;
     public DbContexto(IConfiguration configAppSettings)
@@ -13,19 +12,19 @@ class DbContexto : Microsoft.EntityFrameworkCore.DbContext
     public DbSet<Admin> Admins { get; set; } = default!;
     public DbSet<Vehicle> Vehicles { get; set; } = default!;
 
-protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    modelBuilder.Entity<Admin>().HasData(
-        new Admin
-        {
-            Id = 1,
-            Email = "admin@teste.com",
-            Password = "root",
-            Name = "Administrador",
-            Profile = "Admin"
-        }
-    );
-}
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Admin>().HasData(
+            new Admin
+            {
+                Id = 1,
+                Email = "admin@teste.com",
+                Password = "root",
+                Name = "Administrador",
+                Profile = "Admin"
+            }
+        );
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)

@@ -87,7 +87,7 @@ string GenJwtToken(Admin admin)
     var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
     var claims = new List<Claim>(){
         new Claim("Email", admin.Email),
-        new Claim("Profile", admin.Profile.ToString())
+        new Claim("Role", admin.Profile.ToString())
     };
 
 

@@ -6,7 +6,7 @@ using MinimalApi.Infra.Db;
 
 namespace MinimalApi.Domain.Services;
 
-class AdminService : iAdminService
+public class AdminService : iAdminService
 {
     private readonly DbContexto _contexto;
     public AdminService(DbContexto db)
